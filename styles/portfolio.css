@@ -26,7 +26,7 @@ nav ul{ /* for the distance between li*/
     margin-right: 350px;
 }
 
-header nav{ /* to get the logo and ul on one line*/
+header nav, footer nav{ /* to get the logo and ul on one line*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,22 +38,74 @@ nav ul li{ /* li styling */
     text-transform: uppercase;
     font-weight: 700;
     color: #903D3D;
+    padding: 10px;
 }
 
 header{
     padding-bottom: 13px;
+    margin-top: 30px;
 }
 
-.backgroundimg{ /* foto van mijn grote kop */
+.navulcont a:link, .navulcont a:visited{
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #903D3D;
+    text-decoration: none;
+}
+
+.navulcont a:active{
+    background-color: #c48686;
+}
+
+.navulcont a:hover{
+    background-color: #ffd1d1;
+    color: white;
+    padding: 5px;
+    border-radius: 2px
+}
+
+.navulcont a:focus{
+    border-style: solid;
+    border-color: #ffd1d1;
+    border-width: 3px;
+    outline: none;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+footer .navulcont a:focus{
+    border-color: #c48686;
+}
+
+.backgroundimg-home, .backgroundimg{ /* foto van mijn grote kop */
     background-image: url(/images/Web%201920%20%E2%80%93%202.png);
     width: 100vw;
     height: 100vh;
     background-size: contain;
 }
 
+.backgroundimg-home, .backgroundimg{
+    position:absolute;
+}
+
+.backgroundimg{
+    background-image: url(/images/backgroundimg.png);
+    background-attachment:fixed;
+    z-index: 10;
+    background-repeat:no-repeat;
+}
+
 p, h1, h2, h3, div{
     font-family: Open Sans, sans-serif;
+    color: #903d3d;
 }
+
+
+
+
+/*home page*/
 
 .intro{
     margin-left: 109px;
@@ -89,30 +141,31 @@ p, h1, h2, h3, div{
     margin-bottom: 130px;
 }
 
-.socialmedia-icons{
-    width: 20px;
-    opacity: 45%;
+.socialmedia-icons, .pdfs{
     background-color: white;
     padding: 10px;
     margin-right: 15px;
     border-radius: 4px;
 }
 
-.socialmedia-icons:first-of-type{
+.socialmedia-icons{
+    width: 20px;
+}
+
+.socialmedia-icons:first-of-type, .socialmedia-icons:nth-of-type(2){
     box-shadow: 2px 11px 11px rgba(211, 162, 162, 0.2);
 }
 
-.socialmedia-icons:nth-of-type(2){
+.socialmedia-icons:last-of-type{
     box-shadow: 0px 11px 11px rgba(211, 162, 162, 0.2);
 }
 
-.socialmedia-icons:last-of-type{
+.pdfs{
     box-shadow: -2px 11px 11px rgba(211, 162, 162, 0.2);
 }
 
 .seperator{
     background-color: #FFD1D1;
-    width: 100vw;
     height: 20px;
     margin: 30px 0 30px 0;
 }
@@ -287,12 +340,12 @@ h3{
     width: 250px;
 }
 
-.portfolio-home{
+.portfolio-home, .portfolio-page{
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.portfolio-home h3{
+.portfolio-home h3, .portfolio-page h3, .latestwork-page h3, #page-h3{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -316,19 +369,52 @@ h3{
     border-radius: 2px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     margin-top: 60px;
-    margin-left: 1370px
+    margin-left: 1370px;
 }
 
-.seeall-button a{
+.seeall-button a, .next-button a, .back-button a{
     text-decoration: none;
     font-size: 15px;
     color: #903d3d;
     font-weight: 600;
 }
 
-.seeall-button img{
+.button-arrow{
     width: 20px;
     margin-left: 10px;
+}
+
+#arrow-reversed{
+    margin-right: 10px;
+}
+
+.next-back-buttons{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 260px;
+    margin-top: 300px;
+}
+
+.next-button, .back-button{
+    width: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.next-button{
+    margin-right: 109px;
+}
+
+.back-button{
+    margin-left: 109px;
+}
+
+.latestwork-main .next-button{
+    width: 130px;
+    margin-left: 1260px;
 }
 
 .workwithme-home{
@@ -368,6 +454,14 @@ h3{
     margin-bottom: 20px;
 }
 
+.workwithme-home p a{
+    background-color: #903d3d;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
 .seperator:nth-of-type(5){
     margin-bottom: 0;
 }
@@ -375,3 +469,348 @@ h3{
 .seperator:last-of-type{
     margin: 0 !important;
 }
+
+.workwithme-home a:hover{
+    background-color: white;
+    color: #903d3d;
+}
+
+.workwithme-home a:active{
+    background-color: #903d3d;
+    color: white;
+}
+
+
+
+
+
+
+/* My portfolio*/
+
+main article{
+    margin-top: 120px;
+}
+
+#thumbnails, #thumbnails2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    margin: 0 20px 0 20px;
+}
+
+.thumbnail-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thumbnail-center p{
+    margin: 0 auto;
+    text-align: center;
+    color: #903d3d;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.thumbnail-center{
+    margin-bottom: 50px;
+}
+
+.thumbnail-center a{
+    text-decoration: none;
+}
+
+.thumbnail-center a img:hover, .thumbnail-center a:focus{
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail-center a:focus{
+    padding-bottom: 20px;
+}
+
+.thumbnail-center a:focus{
+    outline: none;
+}
+
+/*footer*/
+
+.pdfs{
+    color: #903d3d;
+}
+
+.footerbuttons{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #ffd1d1;
+}
+
+.portfolio-page{
+    margin-bottom: 300px;
+}
+
+/* latest work */
+
+.latestwork-flex img{
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.latestwork-flex img:first-of-type{
+    width: 280px;
+}
+
+.latestwork-flex img:last-of-type{
+    width: 400px;
+    height: 240px
+}
+
+.latestwork-flex p{
+    color: #903d3d;
+    font-weight: 600;
+    width: 550px;
+}
+
+.latestwork-flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+/*I AMsterdam */
+
+.iamsterdam{
+    display: flex;
+    flex-direction: column;
+}
+
+.iamsterdam h3{
+    display: flex;
+    justify-content: center;
+}
+
+.iamsterdam-grid{
+    display: grid;
+    grid-template: 2/6;
+    margin-top: 80px;
+    grid-gap: 30px;
+}
+
+.iamsterdam img{
+    border-radius: 3px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.iamsterdam-grid img:first-of-type{
+    width: 450px;
+    grid-area: 1/1/3/2;
+}
+
+.iamsterdam-grid p{
+    width: 900px;
+    grid-area: 1/2/2/7;
+    color: #903d3d;
+    font-weight: 600;
+}
+
+.iamsterdam-grid img:nth-of-type(2){
+    width: 250px;
+    grid-area: 2/2/3/3;
+}
+
+.iamsterdam-grid img:nth-of-type(3){
+    width: 155px;
+    grid-area: 2/3/3/4;
+}
+
+.iamsterdam-grid img:nth-of-type(4){
+    width: 127px;
+    grid-area: 2/4/3/5;
+}
+
+.iamsterdam-grid img:last-of-type{
+    width: 54px;
+    grid-area: 2/5/3/6;
+}
+
+.iamsterdam-gallery img{
+    width: 800px;
+    border-radius: 5px;
+}
+
+.iamsterdam-gallery{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.iamsterdam-intro{
+    margin-left: 109px;
+}
+
+
+
+/*Travel App*/
+
+.travelapp{
+    display: flex;
+    flex-direction: column;
+}
+
+.travelapp img{
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0 , 0.2);
+}
+
+.travelapp-grid{
+    display: grid;
+    grid-template: 3/4;
+    margin-bottom: 150px;
+    margin-left: 109px;
+    grid-column-gap: 30px;
+    margin-top: 80px;
+}
+
+.travelapp-grid img{
+    width: 450px;
+    grid-area: 1/1/4/2;
+}
+
+.travelapp-grid p{
+    width: 900px;
+    color: #903d3d;
+    font-weight: 600;
+    grid-area: 1/2/2/4;
+}
+
+.xd-proto{
+    color: white;
+    font-weight: 600;
+    background-color: #903d3d;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    grid-area: 3/2/4/3/;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.travelapp-gallery{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: 109px;
+}
+
+.travelapp-gallery img{
+    width: 250px;
+    margin-bottom: 100px
+}
+
+.travelapp-gallery2 img{
+    width: 1200px;
+    margin-left: 109px;
+}
+
+
+
+
+
+
+/*Avery Cox*/
+
+.averycox img{
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.averycox{
+    display: flex;
+    flex-direction: column;
+}
+
+.averycox h3{
+    display: flex;
+    justify-content: center;
+}
+
+.averycox-grid{
+    display: grid;
+    grid-template: 3/4;
+    margin-bottom: 150px;
+    margin-left: 109px;
+    grid-column-gap: 30px;
+    margin-top: 80px;
+}
+
+.averycox-grid img{
+    width: 450px;
+    grid-area: 1/1/4/2;
+}
+
+.averycox-grid p{
+    width: 800px;
+    color: #903d3d;
+    font-weight: 600;
+    grid-area: 1/2/2/6;
+}
+
+.p{
+    font-size: 10px;
+    color: #903d3d;
+    font-style: italic;
+    grid-area: 3/2/4/3;
+}
+
+.averycox-gallery div img{
+    width: 550px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.home-mobile{
+    width: 218px !important;
+    margin: 0 auto;
+}
+
+.averycox-gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ac-original{
+    margin-right: 
+}
+
+.ac-original, .ac-mine{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ac-original p, .ac-mine p{
+    font-weight: 800;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.ac-original img, .ac-mine img{
+    margin-bottom: 50px;
+}
+
+
+
+
+
