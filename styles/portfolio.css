@@ -80,7 +80,7 @@ footer .navulcont a:focus{
 }
 
 .backgroundimg-home, .backgroundimg{ /* foto van mijn grote kop */
-    background-image: url(/images/Web%201920%20%E2%80%93%202.png);
+    background-image: url(../images/Web%201920%20%E2%80%93%202.png);
     width: 100vw;
     height: 100vh;
     background-size: contain;
@@ -91,7 +91,7 @@ footer .navulcont a:focus{
 }
 
 .backgroundimg{
-    background-image: url(/images/backgroundimg.png);
+    background-image: url(../images/backgroundimg.png);
     background-attachment:fixed;
     z-index: 10;
     background-repeat:no-repeat;
@@ -141,7 +141,7 @@ p, h1, h2, h3, div{
     margin-bottom: 130px;
 }
 
-.socialmedia-icons, .pdfs{
+.socialmedia-icons, .pdfs, a .socialmedia-icons{
     background-color: white;
     padding: 10px;
     margin-right: 15px;
@@ -274,13 +274,13 @@ h3{
     margin-bottom: 60px;
 }
 
-.aboutme-skills section{
+.aboutme-skills div{
     width: 500px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.aboutme-skills section h3{
+.aboutme-skills div h3{
     margin-bottom: 50px;
 }
 
@@ -812,5 +812,227 @@ footer{
 
 
 
+
+/*Online School Library*/
+
+.osl{
+    display: flex;
+    flex-direction: column;
+}
+
+.osl-grid img, .osl-gallery img{
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.osl-grid{
+    display: grid;
+    grid-template: 3/4;
+    margin-bottom: 150px;
+    margin-left: 109px;
+    grid-column-gap: 30px;
+    margin-top: 80px;
+}
+
+.osl-grid img{
+    width: 450px;
+    grid-area: 1/1/4/2;
+}
+
+.osl-grid p{
+    width: 800px;
+    color: #903d3d;
+    font-weight: 600;
+    grid-area: 1/2/2/6;
+}
+
+.osl-gallery img{
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.osl-gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 109px;
+    justify-content: space-between;
+    margin-right: 109px;
+}
+
+
+/*Game Design*/
+
+.gamedesign{
+    display: flex;
+    flex-direction: column;
+}
+
+.game-flex{
+    display: flex;
+    flex-direction: row;
+    margin-left: 109px;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+
+.game-flex p{
+    width: 800px;
+    margin-left: 30px;
+}
+
+.game-flex img, .game-gallery img{
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.game-gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 109px;
+    margin-right: 109px;
+    justify-content: space-around;
+}
+
+.game-gallery img{
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/*Requiem*/
+
+.requiem{
+    display: flex;
+    flex-direction: column;
+}
+
+.requiem-flex img, .requiem-gallery img{
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.requiem-flex{
+    display: flex;
+    flex-direction: row;
+    margin-left: 109px;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+
+.requiem-flex p{
+    width: 800px;
+    margin-left: 30px;
+}
+
+.requiem-gallery{
+    display: grid;
+    grid-template: 3/3;
+    margin-left: 109px;
+    margin-right: 109px;
+}
+
+.requiem-gallery img:first-of-type{
+    grid-area: 1/1/3/2;
+}
+
+.requiem-gallery img:nth-of-type(2){
+    grid-area: 1/2/2/3;
+    margin-bottom: 50px;
+}
+
+.requiem-gallery img:last-of-type{
+    grid-area: 2/2/3/3;
+}
+
+
+
+
+/*Potion Maker*/
+
+.potion{
+    display: flex;
+    flex-direction: column;
+}
+
+.potion-grid img, .potion-gallery img{
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.potion-grid{
+    display: grid;
+    grid-template: 3/4;
+    margin-bottom: 150px;
+    margin-left: 109px;
+    grid-column-gap: 30px;
+    margin-top: 80px;
+}
+
+.potion-grid img{
+    width: 450px;
+    grid-area: 1/1/5/2;
+}
+
+.potion-grid p{
+    width: 800px;
+    color: #903d3d;
+    font-weight: 600;
+    grid-area: 1/2/2/6;
+}
+
+.p{
+    font-size: 10px;
+    color: #903d3d;
+    font-style: italic;
+    grid-area: 3/2/4/3;
+}
+
+.potion-gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 109px;
+    justify-content: space-around;
+    margin-right: 109px;
+}
+
+.potion-gallery img{
+    margin-bottom: 50px;
+}
+
+
+
+
+/*Work With Me*/
+
+.workwithme{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.workwithme p{
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.wwm-main .socialmedia{
+    margin-top: 50px !important;
+    margin-left: 0;
+}
+
+p span{
+    font-weight: 700;
+    color: #c48686;
+}
 
 
