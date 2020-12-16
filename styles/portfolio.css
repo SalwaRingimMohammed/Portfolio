@@ -80,19 +80,12 @@ footer .navulcont a:focus{
     border-color: #c48686;
 }
 
-.backgroundimg-home, .backgroundimg{ /* foto van mijn grote kop */
-    background-size: contain;
-}
-
 .backgroundimg-home{
     background-image: url(../images/Web%201920%20%E2%80%93%202.png);
     background-attachment: scroll;
     z-index: 10;
     background-repeat: no-repeat;
-}
-
-.backgroundimg{
-    position:absolute;
+    background-size: contain;
 }
 
 .backgroundimg{
@@ -100,6 +93,8 @@ footer .navulcont a:focus{
     background-attachment:fixed;
     z-index: 10;
     background-repeat:no-repeat;
+    background-size: cover;
+    position:relative;
 }
 
 p, h1, h2, h3, div{
@@ -511,9 +506,25 @@ main article{
     color: #903d3d;
 }
 
+#cv a, #motivation a{
+    text-decoration: none;
+}
+
 .footerbuttons{
     display: flex;
     justify-content: center;
+}
+
+.socialmedia-cont a img:hover{
+    box-shadow: -2px 11px 11px rgba(211, 162, 162, 0.5);
+}
+
+a .socialmedia-icons:focus{
+    box-shadow: 0 0 11px rgba(211, 162, 162, 0.5) !important;
+}
+
+.socialmedia-cont a:focus{
+    outline: none;
 }
 
 footer{
