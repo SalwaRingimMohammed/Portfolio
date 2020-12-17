@@ -7,6 +7,15 @@
     width: 90px;
     margin-top: 13px;
     margin-left: 19px;
+    outline: none;
+}
+
+a .logo:focus{
+    outline: none;
+}
+
+a .logo:link{
+    outline: none;
 }
 
 nav ul{ /* for the distance between li*/
@@ -348,12 +357,12 @@ h3{
     margin-right: 10px;
 }
 
-.next-back-buttons{
+.next-back-buttons, #next-back-buttons{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin-bottom: 260px;
-    margin-top: 300px;
+    margin-top: 250px;
 }
 
 .next-button, .back-button{
@@ -493,12 +502,13 @@ main article{
 }
 
 .thumbnail-center a:focus{
-    padding-bottom: 20px;
-}
-
-.thumbnail-center a:focus{
+    padding: 20px;
+    border-radius: 7px;
     outline: none;
 }
+
+
+
 
 /*footer*/
 
