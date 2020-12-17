@@ -144,7 +144,7 @@ p, h1, h2, h3, div{
 .socialmedia{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-left: 109px;
     margin-top: 150px;
     margin-bottom: 85px;
@@ -341,11 +341,19 @@ h3{
     margin-left: 1370px;
 }
 
+.seeall-button:focus, .next-back-buttons:focus, #next-back-buttons:focus{
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5) !important;
+}
+
 .seeall-button a, .next-button a, .back-button a{
     text-decoration: none;
     font-size: 15px;
     color: #903d3d;
     font-weight: 600;
+}
+
+.seeall-button a:focus{
+    outline: none;
 }
 
 .button-arrow{
@@ -427,14 +435,16 @@ h3{
 
 .workwithme-home p a{
     margin-bottom: 20px;
-}
-
-.workwithme-home p a{
     background-color: #903d3d;
     color: white;
     padding: 10px 15px;
     border-radius: 10px;
     text-decoration: none;
+}
+
+.workwithme-home p a:focus{
+    outline: none;
+    box-shadow: 0 0 25px rgba(100, 0, 0, 0.7);
 }
 
 .seperator:nth-of-type(5){
@@ -497,11 +507,11 @@ main article{
     text-decoration: none;
 }
 
-.thumbnail-center a img:hover, .thumbnail-center a:focus{
+.thumbnails a img:hover, .thumbnails a:focus{
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
-.thumbnail-center a:focus{
+.thumbnails a:focus{
     padding: 20px;
     border-radius: 7px;
     outline: none;
@@ -514,6 +524,7 @@ main article{
 
 .pdfs{
     color: #903d3d;
+    text-align: center;
 }
 
 #cv a, #motivation a{
