@@ -39,7 +39,6 @@ nav ul{ /* for the distance between li*/
 header nav, footer nav{ /* to get the logo and ul on one line*/
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 nav ul li{ /* li styling */
@@ -73,7 +72,7 @@ header{
     background-color: #ffd1d1;
     color: white;
     padding: 5px;
-    border-radius: 2px
+    border-radius: 2px;
 }
 
 .navulcont a:focus{
