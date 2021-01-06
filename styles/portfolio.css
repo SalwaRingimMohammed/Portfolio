@@ -526,7 +526,7 @@ main article{
     text-align: center;
 }
 
-#cv a, #motivation a{
+#cv a{
     text-decoration: none;
 }
 
@@ -1040,11 +1040,3 @@ p span{
     font-weight: 700;
     color: #c48686;
 }
-
-
-
-/* Media Queries*/
-
-
-
-
